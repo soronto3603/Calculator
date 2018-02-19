@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      </head>
+    <body>
+
+            <div id="mySidenav" class="sidenav">
+                <a class="ss" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div id=sidebar_content>
+                    <!-- <a class="ss" href="#">About</a>
+                    <a class="ss" href="#">Services</a>
+                    <a class="ss" href="#">Clients</a>
+                    <a class="ss" href="#">Contact</a> -->
+                </div>
+            </div>
+            <span style="font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 35px;
+            left: 15px;
+            color: white;
+            z-index: 10;" onclick="openNav()">&#9776;</span>
+        <div class="app">
+            <!-- <h1>JavaScript Calculator</h1>
+            <p class="warning">Don't divide by zero</p> -->
+            <div>
+                <div class="cont_principal">
+                    <div class="cont_calculator">
+                      <div class="cont_title_cal"></div>
+                      <div class="cont_result_cal">
+                    <input type="text" value="" id="post_display" readonly="readonly" maxlength=14/>
+                      <input type="text" value="" class="input_result" id="display" readonly="readonly" maxlength="14" placeholder="3*2" />
+                      </div>
+                      <div class="cont_btns_cal">
+                      <div class="cont_fila_list_num">
+                        <ul class="cont_list_btns list_btns_1">
+                          <li><a onclick="pi_btn()">π</a></li>
+                          <li><a onclick="sin_btn()">sin</a></li>
+                          <li><a onclick="cos_btn()">cos</a></li>
+                          <li><a onclick="tan_btn()">tan</a></li>
+                          <li><a onclick="delete_btn()">del</a></li>   
+                        </ul>
+                        </div>
+                      <div class="cont_fila_list_num">
+                        <ul class="cont_list_btns btns_oscuros">
+                          <li><a onclick="bracket_btn()">()</a></li>
+                          <li><a onclick="number_btn(7)">7</a></li>
+                          <li><a onclick="number_btn(8)">8</a></li>
+                          <li><a onclick="number_btn(9)">9</a></li>
+                          <li><a onclick="number_btn('/')">/</a></li> <!-- &divide -->     
+                        </ul>
+                        </div>    
+                    <div class="cont_fila_list_num">
+                        <ul class="cont_list_btns btns_oscuros">
+                          <li><a onclick="sqrt_btn()">&radic;</a></li>
+                          <li><a onclick="number_btn(4)">4</a></li>
+                          <li><a onclick="number_btn(5)">5</a></li>
+                          <li><a onclick="number_btn(6)">6</a></li>
+                          <li><a onclick="number_btn('*')">X</a></li>    
+                        </ul>
+                        </div>    
+                    <div class="cont_fila_list_num">
+                        <ul class="cont_list_btns btns_oscuros">
+                          <li><a onclick="x2_btn()">x2</a></li>
+                          <li><a onclick="number_btn(1)">1</a></li>
+                          <li><a onclick="number_btn(2)">2</a></li>
+                          <li><a onclick="number_btn(3)">3</a></li>
+                          <li><a onclick="number_btn('-')">-</a></li>  
+                        </ul>
+                        </div>    
+                    <div class="cont_fila_list_num">
+                        <ul class="cont_list_btns btns_oscuros">
+                          <li><a onclick="CE_btn()">CE</a></li>
+                          <li><a onclick="number_btn(0)">0</a></li>
+                          <li><a onclick="number_btn('.')">.</a></li>
+                          <li><a onclick="calc_btn()">=</a></li>
+                          <li><a onclick="number_btn('+')">+</a></li>     
+                        </ul>
+                        </div>    
+                    
+                        <!-- Fin Contenedor botonoes -->
+                      </div>
+                      </div>
+                    </div>
+          </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
